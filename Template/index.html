@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentimental Analysis</title>
+</head>
+<body>
+ 
+    <h2>Checking person sentiments</h2>
+    <h3>Enter text:</h3>
+    <br>
+    <form method = 'post'enctype='multipart/formdata'action='predictMPG'>
+(%csrf_token%)
+<div class="col-md-4 col-sm-4"><label for='fname'>Text:</label></div><input name='TEXT'type='text'value= ><br><br>
+      
+    <br>
+<input type='Submit'value='Submit'></div>    
+</form>
+<br>
+{%if sentiments%}
+<h1>matrix is {{matrix}}</h1>
+<h2>matrix is {{sentiment}}</h2>
+<h3>matrix is {{accuracy}}</h3>
+{% endif %}
+
+</body>
+</html>
